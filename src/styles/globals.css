@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+  .cta{
+    @apply bg-[#2c75ff] rounded-lg px-3 py-2 flex gap-3 items-center uppercase text-lg font-semibold
+    hover-effect
+  }
+
+  .cta-outline{
+    @apply border border-[#f1f1f1]/50 bg-black/10 backdrop-blur-sm rounded-lg px-3 py-2 flex gap-3 items-center capitalize text-lg font-semibold hover-effect
+  }
+
+  .hover-effect{
+    @apply hover:opacity-80 duration-300 ease-in-out transform
+  }
+}
