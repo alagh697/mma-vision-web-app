@@ -2,6 +2,104 @@
 @tailwind components;
 @tailwind utilities;
 
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+@import 'swiper/css/scrollbar';
+@import "swiper/css/effect-coverflow";
+
+
+
+.swiper-pagination-bullet-active {
+  background-color: #f1f1f1 !important;
+  display: inline-block !important;
+  border: none !important;
+  width: 0.4rem !important;
+  height: 0.4rem !important;
+}
+.swiper-pagination-bullet {
+  background-color: transparent!important;
+  display: inline-block !important;
+  border: 1px solid #f1f1f1 !important;
+  width: 0.4rem !important;
+  height: 0.4rem !important;
+}
+.swiper-pagination{
+  bottom: 0px !important;
+}
+.swiper-button-prev, .swiper-button-next{
+  color: #f1f1f1 !important;
+  transform: scale(0.5) !important;
+}
+
+
+.swiper-button-prev{
+  margin-left: 3% !important;
+}
+
+.swiper-button-next{
+  margin-right: 3% !important;
+}
+
+/* .swiper{
+  width: 100% !important;
+  padding: 0 !important;
+} */
+/* .swiper-wrapper {
+  align-items: center !important;
+} */
+
+.swiper-slide{
+  /* display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background-position: center !important;
+  background-size: cover !important; */
+  width: 290px !important;
+  /* max-width: 400px !important; */
+  height: 250px !important; 
+}
+/* .swiper-slide img {
+  display: flex !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+ 
+} */
+
+
+@media (prefers-color-scheme: dark) {
+  
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.4rem;
+  height: 0.4rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #eae9e7;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #c6c6c6; 
+  border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #454440;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+} 
+
+html{
+  /*overflow-y: scroll;*/
+  scrollbar-color: #c6c6c6 #eae9e7; /* thumb and track color */
+  scrollbar-width: thin;
+}
+
 @layer components{
   .cta{
     @apply bg-[#2c75ff] rounded-lg px-3 py-2 flex gap-3 items-center uppercase text-lg font-semibold
@@ -14,5 +112,13 @@
 
   .hover-effect{
     @apply hover:opacity-80 duration-300 ease-in-out transform
+  }
+
+  .nav-link{
+    @apply opacity-90 capitalize hover-effect
+  }
+
+  .sitemap-link{
+    @apply opacity-70 capitalize hover-effect
   }
 }

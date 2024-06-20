@@ -18,7 +18,7 @@ function HomePageHeroSection() {
       w-full h-full'
       >
         <div
-        className='h-3/4 my-auto w-11/12 mx-auto
+        className='h-3/4 my-auto w-11/12 ml-auto
       flex flex-col justify-end items-start gap-10'
         >
         <h1
