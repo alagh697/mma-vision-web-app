@@ -1,4 +1,5 @@
 import HomePageHeroSection from '@/components/HomePage/HomePageHeroSection'
+import HomePageHighlightsSection from '@/components/HomePage/HomePageHighlightsSection'
 import HomePageLiveNowSection from '@/components/HomePage/HomePageLiveNowSection'
 import HomePageNewsSection from '@/components/HomePage/HomePageNewsSection'
 import HomePageSwiperSection from '@/components/HomePage/HomePageSwiperSection'
@@ -10,6 +11,7 @@ function HomePageView() {
       <HomePageHeroSection/>
       <HomePageLiveNowSection/>
       <HomePageSwiperSection/>
+      <HomePageHighlightsSection/>
       <HomePageNewsSection/>
       <HomePageSwiperSection title={`Knockouts of the Season`}/>
     </>
