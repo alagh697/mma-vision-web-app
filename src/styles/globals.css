@@ -94,9 +94,9 @@
   box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
 } 
 
-html{
+html, .highlights{
   /*overflow-y: scroll;*/
-  scrollbar-color: #c6c6c6 #eae9e7; /* thumb and track color */
+  scrollbar-color: #c6c6c6 #222222; /* thumb and track color */
   scrollbar-width: thin;
 }
 

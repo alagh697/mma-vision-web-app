@@ -2,10 +2,11 @@
 import React, { useRef, useState } from 'react'
 import { PlayIcon, PauseIcon, SpeakerXMarkIcon, SpeakerWaveIcon } from '@heroicons/react/24/solid'
 
-function HomePageVideoPlayer({src = 'https://file-examples.com/storage/fed5266c9966708dcaeaea6/2017/04/file_example_MP4_480_1_5MG.mp4', poster = '/kongo.jpg'}:any) {
+function HomePageVideoPlayer({src = '/Kongo.mp4', poster = '/kongo.jpg'}:any) {
     const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
+  const [initialPlay, setInitialPlay] = useState(false);
 
   const handlePlayPause = () => {
     if (videoRef.current) {
@@ -14,6 +15,14 @@ function HomePageVideoPlayer({src = 'https://file-examples.com/storage/fed5266c9
       } else {
         videoRef.current.play();
       }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
+  const handleInitialPlay = () => {
+    if (videoRef.current) {
+      setInitialPlay(true)
+      videoRef.current.play();
       setIsPlaying(!isPlaying);
     }
   };
@@ -33,7 +42,7 @@ function HomePageVideoPlayer({src = 'https://file-examples.com/storage/fed5266c9
         src={src}
         poster={poster}
         className="w-full h-full"
-        controls={false}
+        controls={initialPlay}
         onClick={handlePlayPause}
       ></video>
       <span
@@ -41,14 +50,20 @@ function HomePageVideoPlayer({src = 'https://file-examples.com/storage/fed5266c9
       >
         {`Highlight`}
       </span>
-      <div className="absolute bottom-0 left-0 w-full pl-4 bg-gradient-to-t from-black/50 to-transparent flex space-x-4">
-        <button onClick={handlePlayPause} className="bg-gray-800 p-2 rounded-full text-white">
-          {isPlaying ? <PauseIcon className="w-6 h-6" /> : <PlayIcon className="w-6 h-6" />}
-        </button>
+     {initialPlay == false &&
+     <button onClick={handleInitialPlay} 
+      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+      shadow-xl shadow-white/50 hover-effect
+      bg-blue-600 p-3 rounded-full text-white">
+          {isPlaying ? <PauseIcon className="w-8 h-8" /> : <PlayIcon className="w-8 h-8" />}
+        </button>}
+
+      {/* <div className="absolute bottom-0 left-0 w-full pl-4 bg-gradient-to-t from-black/50 to-transparent flex space-x-4">
+        
         <button onClick={handleMuteUnmute} className="bg-gray-800 p-2 rounded-full text-white">
           {isMuted ? <SpeakerXMarkIcon className="w-6 h-6" /> : <SpeakerWaveIcon className="w-6 h-6" />}
         </button>
-      </div>
+      </div> */}
     </div>
   )
 }

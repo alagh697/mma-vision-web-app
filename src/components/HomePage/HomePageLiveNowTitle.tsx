@@ -36,11 +36,11 @@ function HomePageLiveNowTitle() {
                 </span>
             </button>
             <button
-            className='cta-outline'
+            className='cta-outline text-base uppercase'
             >
-                <BellIcon className="w-9"/>
+                <BellIcon className="w-8"/>
                 <span>
-                    {`Downloads`}
+                    {`Get notifications`}
                 </span>
             </button>
         </div>
