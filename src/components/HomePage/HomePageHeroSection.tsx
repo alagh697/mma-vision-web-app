@@ -22,19 +22,19 @@ function HomePageHeroSection() {
       flex flex-col justify-end items-start gap-10'
         >
         <h1
-        className='text-5xl uppercase font-black'
+        className='text-3xl lg:text-5xl uppercase font-black'
         >
             {`Silva vs Belfort`}
         </h1>
 
         <p
-        className='max-w-md'
+        className='text-sm lg:text-base max-w-sm lg:max-w-md'
         >
             {`During the main event of UFC 126 in February 2011, Silva achieved one of the most incredible knockouts in MMA history by delivering a front kick to Belfort's jaw and knocking him out with punches.`}
         </p>
 
         <div
-        className='flex gap-2'
+        className='flex flex-col lg:flex-row gap-2'
         >
             <button
             className='cta'

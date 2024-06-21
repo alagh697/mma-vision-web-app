@@ -7,7 +7,7 @@ import HomePageLiveNowSlide from './HomePageLiveNowSlide';
 function HomePageLiveNowSlider() {
   return (
     <div
-    className=' w-3/5 bg-[#222222] p-6'
+    className='w-full lg:w-3/5 bg-[#222222] p-6 '
     >
        <Swiper
        effect={'coverflow'}

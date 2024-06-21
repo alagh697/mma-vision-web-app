@@ -14,7 +14,7 @@ function HomePageHighlightsSection() {
       </h2>
 
       <div
-      className='w-full flex gap-10'
+      className='w-full flex flex-col lg:flex-row gap-10'
       >
         <HomePageVideoPlayer/>
         <HomePageHighlightsList/>

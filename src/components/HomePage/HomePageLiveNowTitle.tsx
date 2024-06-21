@@ -25,7 +25,7 @@ function HomePageLiveNowTitle() {
         </p>
 
         <div
-        className='flex gap-2'
+        className='flex flex-col lg:flex-row gap-2 items-start lg:items-center'
         >
             <button
             className='cta'

@@ -9,10 +9,10 @@ function Footer() {
     className='w-full bg-[#222222] '
     >
       <div
-      className='w-5/6 mx-auto py-14 flex'   
+      className='w-5/6 mx-auto py-14 flex flex-col lg:flex-row gap-10'   
       >
         <div
-        className='flex flex-col gap-2 w-1/2'
+        className='flex flex-col gap-2 w-full lg:w-1/2'
         >
         <Link
       href={`/`}
@@ -33,7 +33,7 @@ function Footer() {
       
 
       <div
-      className='flex justify-between w-1/2'
+      className='flex flex-col lg:flex-row justify-between gap-5 w-full lg:w-1/2'
       >
         <FooterSiteMap/>
         <FooterSiteMap/>

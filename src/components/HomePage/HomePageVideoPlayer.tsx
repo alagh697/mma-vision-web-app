@@ -35,13 +35,13 @@ function HomePageVideoPlayer({src = '/Kongo.mp4', poster = '/kongo.jpg'}:any) {
   };
   return (
     <div
-    className='relative w-1/2 aspect-video bg-white/10'
+    className='relative w-full lg:w-1/2 aspect-video bg-white/10'
     >
       <video
         ref={videoRef}
         src={src}
         poster={poster}
-        className="w-full h-full"
+        className="w-full h-full object-cover"
         controls={initialPlay}
         onClick={handlePlayPause}
       ></video>

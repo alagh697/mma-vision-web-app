@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link'
 import React from 'react'
 import SVG from 'react-inlinesvg';
+import HeaderNav from './HeaderNav';
 
 function Header() {
   return (
@@ -25,47 +26,10 @@ function Header() {
       />
       </Link>
 
-      <nav>
-        <ul
-        className='flex gap-6 items-center'
-        >
-          <li>
-            <Link
-            href={`/`}
-            className='nav-link'
-            >
-            {`Live now`}
-            </Link>
-          </li>
-          <li>
-            <Link
-            href={`/`}
-            className='nav-link'
-            >
-            {`Live now`}
-            </Link>
-          </li>
-          <li>
-            <Link
-            href={`/`}
-            className='nav-link'
-            >
-            {`Live now`}
-            </Link>
-          </li>
-          <li>
-            <Link
-            href={`/`}
-            className='nav-link'
-            >
-            {`Live now`}
-            </Link>
-          </li>
-        </ul>
-      </nav>
+      <HeaderNav/>
 
       <div
-      className='bg-white/20 backdrop-blur border border-white/20 rounded-full flex'
+      className='hidden lg:flex bg-white/20 backdrop-blur border border-white/20 rounded-full '
       >
         <div
         className='w-64 pl-3 flex items-center '
