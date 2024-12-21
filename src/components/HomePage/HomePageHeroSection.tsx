@@ -1,9 +1,17 @@
+"use client"
+
 import { ArrowDownCircleIcon } from '@heroicons/react/24/solid'
 import { PlayIcon } from '@heroicons/react/24/solid'
 import Image from 'next/image'
 import React from 'react'
+// import { AppStoreButton, ButtonsContainer, GooglePlayButton } from 'react-mobile-app-button';
+
+
 
 function HomePageHeroSection() {
+
+  const APKUrl = "https://play.google.com/store/apps/details?id=host";
+
   return (
     <section className="relative w-full h-screen">
       <Image
@@ -52,6 +60,23 @@ function HomePageHeroSection() {
                     {`Downloads`}
                 </span>
             </button>
+        </div>
+        <div
+        className='flex flex-col lg:flex-row gap-2'
+        >
+           {/* <ButtonsContainer>
+      <GooglePlayButton
+        url={APKUrl}
+        theme={"light"}
+        className={"flex gap-4 bg-white text-black w-auto h-auto"}
+      />
+
+      <AppStoreButton
+        url={APKUrl}
+        theme={"light"}
+        className={"flex gap-4 bg-white text-black w-auto h-auto"}
+      />
+    </ButtonsContainer> */}
         </div>
         </div>
       </div>
