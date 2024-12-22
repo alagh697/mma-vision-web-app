@@ -2,7 +2,9 @@
 import React, { useRef, useState } from 'react'
 import { PlayIcon, PauseIcon, SpeakerXMarkIcon, SpeakerWaveIcon } from '@heroicons/react/24/solid'
 
-function HomePageVideoPlayer({src = '/Kongo.mp4', poster = '/kongo.jpg'}:any) {
+function HomePageVideoPlayer({fight
+  , src = '/Kongo.mp4', poster = '/kongo.jpg'
+}:any) {
     const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
@@ -33,11 +35,16 @@ function HomePageVideoPlayer({src = '/Kongo.mp4', poster = '/kongo.jpg'}:any) {
       setIsMuted(!isMuted);
     }
   };
+
+  // console.log(fight)
   return (
     <div
     className='relative w-full lg:w-1/2 aspect-video bg-white/10'
     >
-      <video
+       <iframe src={fight?.videoUrl} allowFullScreen 
+       className='w-full aspect-video'
+       />
+      {/* <video
         ref={videoRef}
         src={src}
         poster={poster}
@@ -56,7 +63,7 @@ function HomePageVideoPlayer({src = '/Kongo.mp4', poster = '/kongo.jpg'}:any) {
       shadow-xl shadow-white/50 hover-effect
       bg-blue-600 p-3 rounded-full text-white">
           {isPlaying ? <PauseIcon className="w-8 h-8" /> : <PlayIcon className="w-8 h-8" />}
-        </button>}
+        </button>} */}
 
       {/* <div className="absolute bottom-0 left-0 w-full pl-4 bg-gradient-to-t from-black/50 to-transparent flex space-x-4">
         

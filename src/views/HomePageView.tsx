@@ -6,13 +6,16 @@ import HomePageReviewSection from '@/components/HomePage/HomePageReviewSection'
 import HomePageSwiperSection from '@/components/HomePage/HomePageSwiperSection'
 import React from 'react'
 
-function HomePageView() {
+function HomePageView({fights}: any) {
   return (
     <>
       <HomePageHeroSection/>
+      <HomePageHighlightsSection
+      fights={fights}
+      />
       <HomePageLiveNowSection/>
       <HomePageSwiperSection/>
-      <HomePageHighlightsSection/>
+      
       <HomePageReviewSection/>
       <HomePageNewsSection/>
       <HomePageSwiperSection title={`Knockouts of the Season`}/>

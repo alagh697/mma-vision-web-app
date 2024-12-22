@@ -1,8 +1,10 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import HomePageVideoPlayer from './HomePageVideoPlayer'
 import HomePageHighlightsList from './HomePageHighlightsList'
 
-function HomePageHighlightsSection() {
+function HomePageHighlightsSection({fights}: any) {
+  const [selectedFight, setSelectedFight] = useState(fights[0] || null)
   return (
     <section
     className='py-10 flex flex-col gap-8 w-5/6 mx-auto'
@@ -16,8 +18,14 @@ function HomePageHighlightsSection() {
       <div
       className='w-full flex flex-col lg:flex-row gap-10'
       >
-        <HomePageVideoPlayer/>
-        <HomePageHighlightsList/>
+        <HomePageVideoPlayer
+        fight={selectedFight}
+        />
+        <HomePageHighlightsList
+        fights={fights}
+        selectedFight={selectedFight}
+        setSelectedFight={setSelectedFight}
+        />
       </div>
       
     </section>
