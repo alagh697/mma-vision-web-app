@@ -20,7 +20,6 @@ function HomePageHighlightListItem({fight, selectedFight, setSelectedFight}: any
         alt='Kong vs Barry'
         className='object-cover'
         />
-
       </div>
 
       <div
